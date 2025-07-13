@@ -23,8 +23,14 @@
 - `stores/`  
   Zustand や Recoil などの状態管理ファイル。
 
+- `schemas/`  
+  データベーススキーマまとめ
+
 - `styles/`  
   グローバル CSS やテーマ設定、Tailwind の設定ファイル。
+
+- `types/`  
+  型定義ファイル
 
 - `utils/`  
   文字列操作、日付フォーマット、API クライアントの共通処理など。
