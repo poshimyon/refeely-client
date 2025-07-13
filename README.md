@@ -1,69 +1,36 @@
-# React + TypeScript + Vite
+# src 配下
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## フォルダ説明
 
-Currently, two official plugins are available:
+- `assets/`  
+  画像やフォントなどの静的ファイル。Vite では `public/` も活用。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `components/`  
+  汎用的で再利用可能な UI コンポーネントを配置。
 
-## Expanding the ESLint configuration
+- `features/`  
+  機能ごとのまとまり単位で、ビジネスロジックを含むコンポーネント群。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `hooks/`  
+  カスタム React フック。API 呼び出しやフォーム制御などのロジックを切り出す。
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `layouts/`  
+  ページ共通のレイアウト（ヘッダー、フッターなど）。
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- `pages/`  
+  React Router のルート用画面コンポーネントを配置。
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `stores/`  
+  Zustand や Recoil などの状態管理ファイル。
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- `styles/`  
+  グローバル CSS やテーマ設定、Tailwind の設定ファイル。
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `utils/`  
+  文字列操作、日付フォーマット、API クライアントの共通処理など。
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `App.tsx`  
+  ルーティングや全体レイアウトの設定。
+
+- `main.tsx`  
+  React のエントリーポイント。DOM へのマウント処理を担当。
