@@ -1,42 +1,75 @@
-# src 配下
+# Nuxt Minimal Starter
 
-## フォルダ説明
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-- `assets/`  
-  画像やフォントなどの静的ファイル。Vite では `public/` も活用。
+## Setup
 
-- `components/`  
-  汎用的で再利用可能な UI コンポーネントを配置。
+Make sure to install dependencies:
 
-- `features/`  
-  機能ごとのまとまり単位で、ビジネスロジックを含むコンポーネント群。
+```bash
+# npm
+npm install
 
-- `hooks/`  
-  カスタム React フック。API 呼び出しやフォーム制御などのロジックを切り出す。
+# pnpm
+pnpm install
 
-- `layouts/`  
-  ページ共通のレイアウト（ヘッダー、フッターなど）。
+# yarn
+yarn install
 
-- `pages/`  
-  React Router のルート用画面コンポーネントを配置。
+# bun
+bun install
+```
 
-- `stores/`  
-  Zustand や Recoil などの状態管理ファイル。
+## Development Server
 
-- `schemas/`  
-  データベーススキーマまとめ
+Start the development server on `http://localhost:3000`:
 
-- `styles/`  
-  グローバル CSS やテーマ設定、Tailwind の設定ファイル。
+```bash
+# npm
+npm run dev
 
-- `types/`  
-  型定義ファイル
+# pnpm
+pnpm dev
 
-- `utils/`  
-  文字列操作、日付フォーマット、API クライアントの共通処理など。
+# yarn
+yarn dev
 
-- `App.tsx`  
-  ルーティングや全体レイアウトの設定。
+# bun
+bun run dev
+```
 
-- `main.tsx`  
-  React のエントリーポイント。DOM へのマウント処理を担当。
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
